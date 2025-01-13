@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\disrct\\Documents\\Learning-CSharp\\console.csproj",
-      "projectName": "console",
-      "projectPath": "C:\\Users\\disrct\\Documents\\Learning-CSharp\\console.csproj",
+      "projectUniqueName": "C:\\Users\\disrct\\Documents\\Learning-CSharp\\Introduction 1\\Tarefa\\Tarefa.csproj",
+      "projectName": "Tarefa",
+      "projectPath": "C:\\Users\\disrct\\Documents\\Learning-CSharp\\Introduction 1\\Tarefa\\Tarefa.csproj",
       "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\disrct\\Documents\\Learning-CSharp\\obj\\",
+      "outputPath": "C:\\Users\\disrct\\Documents\\Learning-CSharp\\Introduction 1\\Tarefa\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config"

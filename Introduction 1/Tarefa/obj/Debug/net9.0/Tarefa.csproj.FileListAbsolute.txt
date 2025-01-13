@@ -1,0 +1,15 @@
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\bin\Debug\net9.0\Tarefa.exe
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\bin\Debug\net9.0\Tarefa.deps.json
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\bin\Debug\net9.0\Tarefa.runtimeconfig.json
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\bin\Debug\net9.0\Tarefa.dll
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\bin\Debug\net9.0\Tarefa.pdb
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\obj\Debug\net9.0\Tarefa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\obj\Debug\net9.0\Tarefa.AssemblyInfoInputs.cache
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\obj\Debug\net9.0\Tarefa.AssemblyInfo.cs
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\obj\Debug\net9.0\Tarefa.csproj.CoreCompileInputs.cache
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\obj\Debug\net9.0\Tarefa.sourcelink.json
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\obj\Debug\net9.0\Tarefa.dll
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\obj\Debug\net9.0\refint\Tarefa.dll
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\obj\Debug\net9.0\Tarefa.pdb
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\obj\Debug\net9.0\Tarefa.genruntimeconfig.cache
+C:\Users\disrct\Documents\Learning-CSharp\Introduction 1\Tarefa\obj\Debug\net9.0\ref\Tarefa.dll
