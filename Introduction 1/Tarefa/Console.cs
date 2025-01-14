@@ -1,32 +1,43 @@
 
 namespace games;
-public class Game(int? moneyStart)
+public class Game(int? cookieStart)
 {
 
-    Player player = new(moneyStart, 0, 0);
+    Player player = new(cookieStart, 0, 0, 0);
+    public Machine vanillaCookieMachine = new(10, 1.5);
+    public Machine baker = new(2000, 5);
+    public Machine Furniture = new(100000, 15);
     public void rungame()
     {
+
         while (true)
         {
-            GetMoney();
+            Menu menu = new(player, vanillaCookieMachine, baker, Furniture);
+            Getcookie(menu);
         }
     }
 
-    public void GetMoney()
+    public void Getcookie(Menu menu)
     {
-        if (Console.ReadKey().Key == ConsoleKey.Spacebar)
+        var keyPressed = Console.ReadKey().Key;
+        if (keyPressed == ConsoleKey.Spacebar)
         {
             Console.Clear();
-            player.moneyOwned = player.moneyOwned + 1;
-            Console.WriteLine("Money owned: " + player.moneyOwned);
-            Console.WriteLine("Press B to open the Store");
+            player.cookieOwned = player.cookieOwned + 1 + (1 * player.vanillaCookiesMachineOwned * (int?)vanillaCookieMachine.multiplier) + (1 * (int?)baker.multiplier * player.bakerOwned);
+            Console.WriteLine("cookie owned: " + player.cookieOwned);
+            if (player.vanillaCookiesMachineOwned > 0)
+                Console.WriteLine("Vanilla cookie machine owned: " + player.vanillaCookiesMachineOwned);
+
+            if (player.bakerOwned > 0)
+                Console.WriteLine("baker owned: " + player.bakerOwned);
+
+            Console.WriteLine("Press Enter to open the Store");
         }
 
-        if (Console.ReadKey().Key == ConsoleKey.B)
+        if (keyPressed == ConsoleKey.Enter)
         {
-            Menu menu = new(player);
-            menu.PrintStore();
-
+            Console.Clear();
+            menu.actions();
         }
 
     }
