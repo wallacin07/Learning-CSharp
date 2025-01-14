@@ -1,8 +1,8 @@
 
 namespace games;
-public class Menu(Player actualPlayer, Machine vanillaCookieMachine, Machine baker, Machine Furniture)
+public  class Menu(Player actualPlayer, Machine vanillaCookieMachine, Machine baker, Machine Furniture)
 {
-    public void PrintStore()
+    public  void PrintStore()
     {
         Console.Clear();
         string asciiArt = $@"
@@ -14,18 +14,18 @@ public class Menu(Player actualPlayer, Machine vanillaCookieMachine, Machine bak
        \/       \/          \/            \/     \/                            \/     \/       \/                          \/  
        
 
-A - Vanilla Cookie Machine  ${vanillaCookieMachine.cost}
-B - Baker  ${baker.cost}
-C - Furniture ${Furniture.cost}
+    A - Vanilla Cookie Machine  ${vanillaCookieMachine.cost}
+    B - Baker  ${baker.cost}
+    C - Furniture ${Furniture.cost}
 
-Vanilla machine Owned {actualPlayer.vanillaCookiesMachineOwned}
-Baker Owned {actualPlayer.bakerOwned}
-Furniture Owned {actualPlayer.furnitureOwned}
+    Vanilla machine Owned {actualPlayer.vanillaCookiesMachineOwned}
+    Baker Owned {actualPlayer.bakerOwned}
+    Furniture Owned {actualPlayer.furnitureOwned}
 
-Cookie Owned {actualPlayer.cookieOwned}
+    Cookie Owned {actualPlayer.cookieOwned}
 
-Press SPACE to go back.
-";
+    Press SPACE to go back.
+    ";
         Console.Clear();
         Console.WriteLine(asciiArt);
     }
@@ -76,9 +76,3 @@ Press SPACE to go back.
         }
     }
 }
-
-
-
-
-
-

@@ -1,13 +1,13 @@
 
 namespace games;
-public class Game(int? cookieStart)
+public static class Game
 {
 
-    Player player = new(cookieStart, 0, 0, 0);
-    public Machine vanillaCookieMachine = new(10, 1.5);
-    public Machine baker = new(2000, 5);
-    public Machine Furniture = new(100000, 15);
-    public void rungame()
+    static Player player = new(0, 0, 0, 0);
+    static public Machine vanillaCookieMachine = new(10, 1.5);
+    static public Machine baker = new(2000, 5);
+    static public Machine Furniture = new(100000, 15);
+    static public void rungame()
     {
 
         while (true)
@@ -17,7 +17,7 @@ public class Game(int? cookieStart)
         }
     }
 
-    public void Getcookie(Menu menu)
+    public static void Getcookie(Menu menu)
     {
         var keyPressed = Console.ReadKey().Key;
         if (keyPressed == ConsoleKey.Spacebar)
