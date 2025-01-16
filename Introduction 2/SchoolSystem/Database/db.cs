@@ -64,6 +64,7 @@ public class DB<T>
                 var line = lines[i];
                 writer.WriteLine(line);
             }
+            System.Console.WriteLine($"Lines writed on {path}");
         }
         catch
         {
@@ -117,11 +118,16 @@ public class DB<T>
             var data = all[i].SaveTo();
             string line = string.Empty;
 
-            for (int j = 0; i < data.Length; i++)
+            for (int j = 0; j < data.Length; j++)
+            {
                 line += data[j] + ",";
+                System.Console.WriteLine(line);
+            }
     
             lines.Add(line);
         }
+
+        System.Console.WriteLine("Lines Builded");
 
         if (saveFile(lines))
             return;
@@ -148,7 +154,7 @@ public class DB<T>
         get {
 
             if (app == null)
-                app = new DB<T>(Path.GetTempPath());
+                app = new DB<T>("");
             return app;
             }
     }
