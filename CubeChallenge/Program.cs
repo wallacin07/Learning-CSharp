@@ -2,7 +2,7 @@
 {
     public static void Main(string[] args)
     {
-        int i = 0;
+        // int i = 0;
         string[] colors = ["Red", "Blue", "Yellow", "Green"];
 
         //TODO [Top,     Bottom,    Left,    Right,    Front,    Back   ]
@@ -12,39 +12,17 @@
         Cubo cubo4 = new([colors[0], colors[3], colors[0], colors[1], colors[2], colors[3]]);
 
         var allConnectionsCube1 = cubo1.getLines();
+        var allConnectionsCube2 = cubo2.getLines();
+        var allConnectionsCube3 = cubo3.getLines();
+        var allConnectionsCube4 = cubo4.getLines();
 
-        foreach (var connectionList in allConnectionsCube1)
+        Solver solver = new(allConnectionsCube1,allConnectionsCube2,allConnectionsCube3,allConnectionsCube4);
+        var giantGraph = solver.getGraph();
+         foreach (var connectionList in giantGraph)
         {
-            connectionList.ForEach(x => Console.Write(x.ToString()));
+            connectionList.ForEach(x => Console.Write(x.ToString()+","));
             Console.WriteLine();
-            // Console.WriteLine($"[ {string.Join("", connectionList)} ]");
-            i++;
         }
-
-        Console.WriteLine(i);
-
-
-        // Console.WriteLine("\n\n");
-        // var allConnectionsCube2 = cubo2.getLines();
-
-        // foreach (var connectionList in allConnectionsCube2)
-        // {
-        //     Console.WriteLine($"[ {string.Join(", ", connectionList)} ]");
-        // }
-        // Console.WriteLine("\n\n");
-        // var allConnectionsCube3 = cubo3.getLines();
-
-        // foreach (var connectionList in allConnectionsCube3)
-        // {
-        //     Console.WriteLine($"[ {string.Join(", ", connectionList)} ]");
-        // }
-        // Console.WriteLine("\n\n");
-        // var allConnectionsCube4 = cubo4.getLines();
-
-        // foreach (var connectionList in allConnectionsCube4)
-        // {
-        //     Console.WriteLine($"[ {string.Join(", ", connectionList)} ]");
-        // }
 
     }
 

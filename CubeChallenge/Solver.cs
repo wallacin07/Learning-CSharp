@@ -37,26 +37,26 @@ public class Solver
                 if (interable1 == 0)
                 {
                     if (x.ToString() == "Blue")
-                        RedWithBlue.Add(x.ToString());
+                        RedWithBlue.Add("1");
 
                     if (x.ToString() == "Yellow")
-                        RedWithYellow.Add(x.ToString());
+                        RedWithYellow.Add("1");
 
                     if (x.ToString() == "Green")
-                        RedWithGreen.Add(x.ToString());
+                        RedWithGreen.Add("1");
                 }
 
                 if (interable1 == 1)
                     if (x.ToString() == "Blue")
-                        BlueWithGreen.Add(x.ToString());
+                        BlueWithGreen.Add("1");
 
                 if (interable1 == 3)
                 {
                     if (x.ToString() == "Blue")
-                        YellowWithBlue.Add(x.ToString());
+                        YellowWithBlue.Add("1");
 
                     if (x.ToString() == "Green")
-                        YellowWithGreen.Add(x.ToString());
+                        YellowWithGreen.Add("1");
                 }
             });
             interable1++;
@@ -72,64 +72,97 @@ public class Solver
                 if (interable2 == 0)
                 {
                     if (x.ToString() == "Blue")
-                        RedWithBlue.Add(x.ToString());
+                        RedWithBlue.Add("2");
 
                     if (x.ToString() == "Yellow")
-                        RedWithYellow.Add(x.ToString());
+                        RedWithYellow.Add("2");
 
                     if (x.ToString() == "Green")
-                        RedWithGreen.Add(x.ToString());
+                        RedWithGreen.Add("2");
                 }
 
                 if (interable2 == 1)
                     if (x.ToString() == "Blue")
-                        BlueWithGreen.Add(x.ToString());
+                        BlueWithGreen.Add("2");
 
                 if (interable2 == 3)
                 {
                     if (x.ToString() == "Blue")
-                        YellowWithBlue.Add(x.ToString());
+                        YellowWithBlue.Add("2");
 
                     if (x.ToString() == "Green")
-                        YellowWithGreen.Add(x.ToString());
+                        YellowWithGreen.Add("2");
                 }
             });
             interable2++;
         }
 
-    foreach (var connectionList in lineCube3)
+        foreach (var connectionList in lineCube3)
         {
             connectionList.ForEach(x =>
             {
 
-                if (interable2 == 0)
+                if (interable3 == 0)
                 {
                     if (x.ToString() == "Blue")
-                        RedWithBlue.Add(x.ToString());
+                        RedWithBlue.Add("3");
 
                     if (x.ToString() == "Yellow")
-                        RedWithYellow.Add(x.ToString());
+                        RedWithYellow.Add("3");
 
                     if (x.ToString() == "Green")
-                        RedWithGreen.Add(x.ToString());
+                        RedWithGreen.Add("3");
                 }
 
-                if (interable2 == 1)
+                if (interable3 == 1)
                     if (x.ToString() == "Blue")
-                        BlueWithGreen.Add(x.ToString());
+                        BlueWithGreen.Add("3");
 
-                if (interable2 == 3)
+                if (interable3 == 3)
                 {
                     if (x.ToString() == "Blue")
-                        YellowWithBlue.Add(x.ToString());
+                        YellowWithBlue.Add("3");
 
                     if (x.ToString() == "Green")
-                        YellowWithGreen.Add(x.ToString());
+                        YellowWithGreen.Add("3");
                 }
             });
-            interable2++;
+            interable3++;
         }
-        return new List<List<string>> { };
+
+        foreach (var connectionList in lineCube4)
+        {
+            connectionList.ForEach(x =>
+            {
+
+                if (interable4 == 0)
+                {
+                    if (x.ToString() == "Blue")
+                        RedWithBlue.Add("4");
+
+                    if (x.ToString() == "Yellow")
+                        RedWithYellow.Add("4");
+
+                    if (x.ToString() == "Green")
+                        RedWithGreen.Add("4");
+                }
+
+                if (interable4 == 1)
+                    if (x.ToString() == "Blue")
+                        BlueWithGreen.Add("4");
+
+                if (interable4 == 3)
+                {
+                    if (x.ToString() == "Blue")
+                        YellowWithBlue.Add("4");
+
+                    if (x.ToString() == "Green")
+                        YellowWithGreen.Add("4");
+                }
+            });
+            interable4++;
+        }
+        return new List<List<string>> {RedWithBlue,RedWithYellow, RedWithGreen,YellowWithBlue,YellowWithGreen,BlueWithGreen};
     }
 }
 
