@@ -17,6 +17,7 @@ public class Class : DataBaseObject
     }
     protected override void LoadFrom(string[] data)
     {
+        System.Console.WriteLine("ta passando aqui2");
         this.UUID = data[0];
         this.Name = data[1];
         for (int i = 2; i < data.Length; i++)
@@ -33,7 +34,7 @@ public class Class : DataBaseObject
     {
         this.UUID,
         this.Name,
-        string.Join(";", students_id),
-        string.Join(";", subjects_id)
+        string.Join(",", students_id),
+        string.Join(",", subjects_id)
     };
 }

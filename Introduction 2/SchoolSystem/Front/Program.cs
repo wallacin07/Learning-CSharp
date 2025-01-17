@@ -105,8 +105,8 @@ while (true)
                         }
                     }
 
-                    System.Console.WriteLine(classSub.Count);
-                    System.Console.WriteLine(classStu.Count);
+                        System.Console.WriteLine(classSub);
+                        System.Console.WriteLine(classStu);
                         newClass.subjects_id = classSub;
                         newClass.students_id = classStu;
                          System.Console.WriteLine("È o save");
@@ -158,66 +158,68 @@ while (true)
                 break;
 
             case 8:
-                var subjectsClass = subjectsRepo.All.ToArray();
-                var studentsClass = studentsRepo.All.ToArray();
-                var teacherClass = teachersRepo.All.ToArray();
-                var classes = classesRepo.All;
 
 
-                foreach (var Class in classes)
-                {
-                    WriteLine(Class.Name);
-                    var studentsArray = Class.students_id.ToArray();
-                    var subjectsArray = Class.subjects_id.ToArray();
-
-                    List<string> studentsPrint = [];
-                    List<string> subjectPrint = [];
-                    List<string> teacherPrint = [];
-
-                    for (int i = 0; i < studentsClass.Length; i++)
-                    {
-                        for (int j = 0; j < studentsArray.Length; j++)
-                        {
-                            if (studentsClass[i].UUID == studentsArray[j])
-                            {
-                                studentsPrint.Add(studentsClass[i].Name);
-                            }
-                        }
-                    }
-
-                    for (int i = 0; i < subjectsClass.Length; i++)
-                    {
-                        for (int j = 0; j < subjectsArray.Length; j++)
-                        {
-                            if (subjectsClass[i].UUID == subjectsArray[j])
-                            {
-                                subjectPrint.Add(subjectsClass[i].Name);
-                                foreach (var teacher in teacherClass)
-                                {
-                                    if (subjectsClass[i].teacher_id == teacher.UUID)
-                                    {
-                                        teacherPrint.Add(teacher.Name);
-                                    }
-                                }
-                            }
-                        }
-                    }
+                // var subjectsClass = subjectsRepo.All.ToArray();
+                // var studentsClass = studentsRepo.All.ToArray();
+                // var teacherClass = teachersRepo.All.ToArray();
+                // var classes = classesRepo.All;
 
 
+                // foreach (var Class in classes)
+                // {
+                //     WriteLine(Class.Name);
+                //     var studentsArray = Class.students_id.ToArray();
+                //     var subjectsArray = Class.subjects_id.ToArray();
 
-                    Clear();
-                    int maxLines = Math.Max(subjectPrint.Count, studentsPrint.Count);
-                    Console.WriteLine("Students".PadRight(20) + "Subjects");
-                    Console.WriteLine(new string('-', 40));
+                //     List<string> studentsPrint = [];
+                //     List<string> subjectPrint = [];
+                //     List<string> teacherPrint = [];
 
-                    for (int i = 0; i < maxLines; i++)
-                    {
-                        string SubjectsTer = i < subjectPrint.Count ? subjectPrint[i] : "";
-                        string StudentTer = i < studentsPrint.Count ? studentsPrint[i] : "";
-                        string TeacherTer = i < teacherPrint.Count ? teacherPrint[i] : "";
-                        Console.WriteLine(SubjectsTer.PadRight(20) + StudentTer.PadRight(20) + TeacherTer);
-                    }
-                }
+                //     for (int i = 0; i < studentsClass.Length; i++)
+                //     {
+                //         for (int j = 0; j < studentsArray.Length; j++)
+                //         {
+                //             if (studentsClass[i].UUID == studentsArray[j])
+                //             {
+                //                 studentsPrint.Add(studentsClass[i].Name);
+                //             }
+                //         }
+                //     }
+
+                //     for (int i = 0; i < subjectsClass.Length; i++)
+                //     {
+                //         for (int j = 0; j < subjectsArray.Length; j++)
+                //         {
+                //             if (subjectsClass[i].UUID == subjectsArray[j])
+                //             {
+                //                 subjectPrint.Add(subjectsClass[i].Name);
+                //                 foreach (var teacher in teacherClass)
+                //                 {
+                //                     if (subjectsClass[i].teacher_id == teacher.UUID)
+                //                     {
+                //                         teacherPrint.Add(teacher.Name);
+                //                     }
+                //                 }
+                //             }
+                //         }
+                //     }
+
+
+
+                //     Clear();
+                //     int maxLines = Math.Max(subjectPrint.Count, studentsPrint.Count);
+                //     Console.WriteLine("Students".PadRight(20) + "Subjects");
+                //     Console.WriteLine(new string('-', 40));
+
+                //     for (int i = 0; i < maxLines; i++)
+                //     {
+                //         string SubjectsTer = i < subjectPrint.Count ? subjectPrint[i] : "";
+                //         string StudentTer = i < studentsPrint.Count ? studentsPrint[i] : "";
+                //         string TeacherTer = i < teacherPrint.Count ? teacherPrint[i] : "";
+                //         Console.WriteLine(SubjectsTer.PadRight(20) + StudentTer.PadRight(20) + TeacherTer);
+                //     }
+                // }
                 break;
         }
 

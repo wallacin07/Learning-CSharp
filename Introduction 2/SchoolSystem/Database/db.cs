@@ -122,8 +122,9 @@ public class DB<T>
             {
                 line += data[j] + ",";
                 System.Console.WriteLine(line);
+                System.Console.WriteLine("Aqui1");
             }
-    
+    System.Console.WriteLine("Aqui2");
             lines.Add(line);
         }
 

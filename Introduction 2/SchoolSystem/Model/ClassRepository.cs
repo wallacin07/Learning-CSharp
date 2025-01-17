@@ -20,7 +20,9 @@ public class ClassRepository : IRepository<Class>
     public void Add(Class obj)
         {
             var classList = All;
+        System.Console.WriteLine("All: "+classList);
             classList.Add(obj);
+            System.Console.WriteLine("ta passando aqui");
             dbClass.Save(classList);
         }
 }
